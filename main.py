@@ -30,10 +30,10 @@ if "data_face" and "data_lip" not in st.session_state:
     # 初始化data变量
         data_face = [1 for x in range(0, 12)]
         data_lip = [1 for x in range(0, 12)]
-    else:
-        # 恢复data变量的状态
-        data_face = st.session_state["data_face"]
-        data_lip = st.session_state["data_lip"]
+else:
+    # 恢复data变量的状态
+    data_face = st.session_state["data_face"]
+    data_lip = st.session_state["data_lip"]
 
 for num in range(12):
   QA(data_face, data_lip, num+1)
